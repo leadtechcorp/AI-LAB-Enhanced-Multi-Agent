@@ -1,5 +1,7 @@
 {
+  "python_version": "3.11",
   "dependencies": [
+    ".",
     "./my_agent"
   ],
   "graphs": {
