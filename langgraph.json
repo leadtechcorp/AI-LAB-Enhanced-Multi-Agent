@@ -3,7 +3,9 @@
     "./my_agent"
   ],
   "graphs": {
-    "my_agent": "./my_agent/graph.py:graph"
+    "my_agent": "./my_agent/graph.py:graph",
+    "customer_service": "./customer_service_agent.py:customer_service_graph",
+    "enhanced_multi_agent": "./langgraph_cloud_config.py:enhanced_multi_agent_graph"
   },
   "env": ".env"
 }
