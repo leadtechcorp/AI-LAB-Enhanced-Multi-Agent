@@ -1,13 +1,13 @@
 {
   "python_version": "3.11",
   "dependencies": [
-    ".",
-    "./my_agent"
+    "."
   ],
   "graphs": {
     "my_agent": "./my_agent/graph.py:graph",
     "customer_service": "./customer_service_agent.py:customer_service_graph",
     "enhanced_multi_agent": "./langgraph_cloud_config.py:enhanced_multi_agent_graph"
   },
-  "env": ".env"
+  "env": ".env",
+  "dockerfile": "Dockerfile.cloud"
 }
