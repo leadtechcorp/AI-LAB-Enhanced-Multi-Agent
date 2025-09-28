@@ -1,6 +1,6 @@
-# AI LAB LangGraph Development
+# AI LAB Customer Service Development
 
-A LangGraph-based conversational AI agent for the AI LAB platform.
+A LangGraph-based customer service AI agent for the AI LAB platform.
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@ A LangGraph-based conversational AI agent for the AI LAB platform.
 ## 📁 Project Structure
 
 ```
-AI-LAB-langGraph-dev/
+AI-LAB-Customer-Service-Dev/
 ├── langgraph.json          # LangGraph configuration
 ├── my_agent/              # Main agent package
 │   ├── __init__.py        # Package initialization
@@ -26,8 +26,8 @@ AI-LAB-langGraph-dev/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/leadtechcorp/AI-LAB-langGraph-dev.git
-   cd AI-LAB-langGraph-dev
+   git clone https://github.com/leadtechcorp/AI-LAB-Customer-Service-Dev.git
+   cd AI-LAB-Customer-Service-Dev
    ```
 
 2. **Create virtual environment**:

@@ -19,7 +19,7 @@ def trigger_deployment_update():
     print("=" * 60)
     print(f"📍 Deployment ID: {deployment_id}")
     print(f"🏢 Organization: {organization_id}")
-    print(f"📂 Repository: leadtechcorp/AI-LAB-Enhanced-Multi-Agent")
+    print(f"📂 Repository: leadtechcorp/AI-LAB-Customer-Service-Dev")
     print(f"🌿 Branch: main")
     print("")
     
@@ -77,3 +77,10 @@ def trigger_deployment_update():
 
 if __name__ == "__main__":
     trigger_deployment_update()
+
+
+
+
+
+
+

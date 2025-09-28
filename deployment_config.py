@@ -8,8 +8,8 @@ from typing import Dict, Any
 
 # Cloud deployment settings
 DEPLOYMENT_CONFIG = {
-    "project_name": "AI-LAB-Enhanced-Multi-Agent",
-    "description": "Enhanced multi-agent system with sophisticated routing and coordination",
+    "project_name": "AI-LAB-Customer-Service-Dev",
+    "description": "Customer service AI agent with sophisticated routing and coordination",
     "version": "2.0.0",
     "environment": "production",
     
@@ -17,7 +17,7 @@ DEPLOYMENT_CONFIG = {
     "langsmith": {
         "endpoint": "https://eu.api.smith.langchain.com",
         "organization_id": "fb2e6235-a27a-4a33-bd77-7c865b6d5252",
-        "project_name": "AI-LAB-Enhanced-Multi-Agent",
+        "project_name": "AI-LAB-Customer-Service-Dev",
         "tracing_enabled": True
     },
     
@@ -116,3 +116,10 @@ def validate_deployment_config() -> bool:
 
 # Export configuration
 __all__ = ["DEPLOYMENT_CONFIG", "get_cloud_environment_variables", "validate_deployment_config"]
+
+
+
+
+
+
+
