@@ -2,6 +2,117 @@
 
 A LangGraph-based customer service AI agent for the AI LAB platform.
 
+## 📊 Solution Architecture
+
+```mermaid
+graph TB
+    subgraph "User Interface Layer"
+        USER[👤 User Input]
+        STUDIO[🎨 LangGraph Studio<br/>Visual IDE]
+    end
+    
+    subgraph "LangGraph Cloud Platform"
+        subgraph "Graph Registry"
+            ENHANCED[🎯 Enhanced Multi-Agent<br/>5 Specialized Agents]
+            CUSTOMER[🎧 Customer Service<br/>7-Node Workflow]
+            BASIC[💬 Basic Agent<br/>Simple Chatbot]
+        end
+        
+        subgraph "Enhanced Multi-Agent System"
+            COORD[🎯 COORDINATOR<br/>AI-Powered Routing]
+            
+            TECH[🛠️ Technical Expert<br/>System Diagnostics]
+            CS[🎧 Customer Service<br/>Premium Support]
+            SALES[💼 Sales Advisor<br/>Enterprise Consultation]
+            DATA[📊 Data Analyst<br/>Advanced Analytics]
+            GEN[💡 General Assistant<br/>Standard Queries]
+            
+            COORD -->|Route by Context| TECH
+            COORD -->|Route by Sentiment| CS
+            COORD -->|Route by Intent| SALES
+            COORD -->|Route by Analytics| DATA
+            COORD -->|Route by Default| GEN
+        end
+        
+        subgraph "Customer Service Workflow"
+            CS_ID[1️⃣ Customer ID]
+            SENT[2️⃣ Sentiment Analysis]
+            ISSUE[3️⃣ Issue Categorization]
+            KB[4️⃣ Knowledge Base Search]
+            ESC_ROUTER[5️⃣ Escalation Router]
+            RESOLVE[6️⃣ Resolution]
+            ESCALATE[7️⃣ Escalation Handler]
+            
+            CS_ID --> SENT
+            SENT --> ISSUE
+            ISSUE --> KB
+            KB --> ESC_ROUTER
+            ESC_ROUTER -->|Standard| RESOLVE
+            ESC_ROUTER -->|High Priority| ESCALATE
+        end
+        
+        subgraph "State Management"
+            MEMORY[(🧠 Memory Saver<br/>Checkpointer)]
+            STATE[📝 Conversation State<br/>Context Tracking]
+        end
+    end
+    
+    subgraph "Integration & Monitoring"
+        LANGSMITH[📈 LangSmith<br/>Tracing & Analytics]
+        GITHUB[🐙 GitHub<br/>Version Control]
+        ENV[🔐 Environment Variables<br/>API Keys & Config]
+    end
+    
+    subgraph "Deployment Infrastructure"
+        DOCKER[🐳 Docker<br/>Containerization]
+        API[🔌 REST API<br/>Endpoints]
+        AUTO[⚡ Auto-Scaling<br/>Load Management]
+    end
+    
+    USER --> ENHANCED
+    USER --> CUSTOMER
+    USER --> BASIC
+    
+    ENHANCED --> COORD
+    CUSTOMER --> CS_ID
+    
+    COORD --> MEMORY
+    CS_ID --> MEMORY
+    MEMORY --> STATE
+    
+    ENHANCED --> LANGSMITH
+    CUSTOMER --> LANGSMITH
+    BASIC --> LANGSMITH
+    
+    GITHUB -->|CI/CD| DOCKER
+    DOCKER -->|Deploy| API
+    API -->|Scale| AUTO
+    
+    STUDIO -.->|Monitor & Debug| ENHANCED
+    STUDIO -.->|Monitor & Debug| CUSTOMER
+    
+    ENV -.->|Configure| ENHANCED
+    ENV -.->|Configure| CUSTOMER
+    ENV -.->|Configure| BASIC
+    
+    style COORD fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    style ENHANCED fill:#7B68EE,stroke:#4B0082,stroke-width:2px,color:#fff
+    style CUSTOMER fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style BASIC fill:#51CF66,stroke:#2F9E44,stroke-width:2px,color:#fff
+    style LANGSMITH fill:#FFA94D,stroke:#E67700,stroke-width:2px,color:#000
+    style STUDIO fill:#20C997,stroke:#0CA678,stroke-width:2px,color:#fff
+    style MEMORY fill:#845EF7,stroke:#5F3DC4,stroke-width:2px,color:#fff
+```
+
+### Key Components
+
+- **Enhanced Multi-Agent**: 5 specialized agents with intelligent routing for complex scenarios
+- **Customer Service**: 7-node workflow with sentiment analysis and escalation logic
+- **Basic Agent**: Simple conversational baseline with memory persistence
+- **LangGraph Cloud**: Production-ready deployment with auto-scaling
+- **LangSmith Integration**: Real-time tracing, analytics, and monitoring
+- **Visual IDE**: Cloud-native development and debugging interface
+
 ## 🚀 Features
 
 - **Stateful Conversations**: Maintains context across multiple interactions
