@@ -79,7 +79,7 @@ def get_cloud_environment_variables() -> Dict[str, str]:
         "LANGCHAIN_TRACING_V2": "true",
         "LANGCHAIN_ENDPOINT": "https://eu.api.smith.langchain.com",
         "LANGSMITH_ENDPOINT": "https://eu.api.smith.langchain.com",
-        "LANGCHAIN_PROJECT": "AI-LAB-Enhanced-Multi-Agent",
+        "LANGCHAIN_PROJECT": "AI-LAB-Customer-Service-Dev",
         "LANGCHAIN_ORGANIZATION_ID": "fb2e6235-a27a-4a33-bd77-7c865b6d5252",
         
         # Performance settings
